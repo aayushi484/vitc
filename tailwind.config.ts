@@ -10,6 +10,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        paper: '#FAFAF7',
+        ink: '#111111',
+        accent: '#166534',
+        'band-good': '#16A34A',
+        'band-fair': '#D97706',
+        'band-attention': '#E11D48',
         field: {
           50: '#f0fdf4',
           100: '#dcfce7',
@@ -36,14 +42,26 @@ const config: Config = {
           900: '#5e351d',
         },
         ats: {
-          good: '#16a34a',
-          fair: '#d97706',
-          attention: '#dc2626',
-        }
+          good: '#16A34A',
+          fair: '#D97706',
+          attention: '#E11D48',
+        },
+      },
+      borderRadius: {
+        ats: '8px',
+      },
+      boxShadow: {
+        hard: '4px 4px 0px #111111',
+        'hard-sm': '2px 2px 0px #111111',
+        'hard-lg': '6px 6px 0px #111111',
+      },
+      borderWidth: {
+        '1.5': '1.5px',
       },
       fontFamily: {
-        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-      }
+        sans: ['var(--font-inter)', 'system-ui', '-apple-system', 'sans-serif'],
+        heading: ['var(--font-space-grotesk)', 'sans-serif'],
+      },
     },
   },
   plugins: [],

@@ -1,0 +1,297 @@
+/**
+ * AgriTrust Score (ATS) - Real Karnataka Parcel Fixtures (Amendment #1, V1)
+ * Mandya, Hassan, Mysore, Shimoga, and Bellary farming belts.
+ * No MH or PB IDs. Exact geographic district coordinates.
+ */
+
+import { ScoreResponse, CardCredential } from './contracts';
+
+export const SEEDED_PARCELS: Record<string, ScoreResponse> = {
+  'CEL-KA-MANDYA-001': {
+    parcel_id: 'CEL-KA-MANDYA-001',
+    farmer_display_name: 'Basavegowda Patil',
+    district: 'Mandya',
+    state: 'Karnataka',
+    coordinates: {
+      lat: 12.5226,
+      lng: 76.8974,
+    },
+    raw_index: 0.48,
+    corrected_index: 0.82,
+    uncertainty_interval: [0.78, 0.86],
+    attribution: {
+      moisture_vwc: 0.32,
+      vh_vv_ratio: 0.24,
+      intersection_fraction: 0.96,
+      '7d_rainfall_sum': 34.0,
+    },
+    integrity_flag: false,
+    integrity_flag_reason: null,
+    integrity_deviation_score: 0.03,
+    gps_consistent: true,
+    computed_at: new Date(Date.now() - 3600 * 1000 * 3).toISOString(), // 3h ago
+    forecast: {
+      daily: [
+        { date: '2026-09-02', rainfall_mm: 0, temp_max_c: 30, temp_min_c: 21 },
+        { date: '2026-09-03', rainfall_mm: 4, temp_max_c: 29, temp_min_c: 20 },
+        { date: '2026-09-04', rainfall_mm: 18, temp_max_c: 27, temp_min_c: 19 },
+        { date: '2026-09-05', rainfall_mm: 22, temp_max_c: 26, temp_min_c: 19 },
+        { date: '2026-09-06', rainfall_mm: 5, temp_max_c: 28, temp_min_c: 20 },
+        { date: '2026-09-07', rainfall_mm: 0, temp_max_c: 30, temp_min_c: 21 },
+        { date: '2026-09-08', rainfall_mm: 0, temp_max_c: 31, temp_min_c: 22 },
+      ],
+    },
+    land_risk: {
+      score: 10,
+      flags: ['CANAL_IRRIGATED', 'CLEAR_TERRAIN_SLOPE'],
+      attestation_id: 'ATS-LAND-KA-MND-001',
+      trend_flag: 'improving',
+    },
+    crop: {
+      declared: 'Paddy Rice',
+      category: 'FOOD',
+      risk_weight: 0.88,
+    },
+    consent_granted: true,
+  },
+
+  'PARCEL-KA-HASSAN-002': {
+    parcel_id: 'PARCEL-KA-HASSAN-002',
+    farmer_display_name: 'Manjunatha Gowda',
+    district: 'Hassan',
+    state: 'Karnataka',
+    coordinates: {
+      lat: 13.0072,
+      lng: 76.0962,
+    },
+    raw_index: 0.42,
+    corrected_index: 0.64,
+    uncertainty_interval: [0.58, 0.70],
+    attribution: {
+      moisture_vwc: 0.22,
+      vh_vv_ratio: 0.17,
+      intersection_fraction: 0.89,
+      '7d_rainfall_sum': 14.5,
+    },
+    integrity_flag: false,
+    integrity_flag_reason: null,
+    integrity_deviation_score: 0.07,
+    gps_consistent: true,
+    computed_at: new Date(Date.now() - 3600 * 1000 * 6).toISOString(),
+    forecast: {
+      daily: [
+        { date: '2026-09-02', rainfall_mm: 0, temp_max_c: 28, temp_min_c: 19 },
+        { date: '2026-09-03', rainfall_mm: 2, temp_max_c: 27, temp_min_c: 18 },
+        { date: '2026-09-04', rainfall_mm: 8, temp_max_c: 26, temp_min_c: 18 },
+        { date: '2026-09-05', rainfall_mm: 6, temp_max_c: 26, temp_min_c: 18 },
+        { date: '2026-09-06', rainfall_mm: 0, temp_max_c: 27, temp_min_c: 19 },
+        { date: '2026-09-07', rainfall_mm: 0, temp_max_c: 28, temp_min_c: 19 },
+        { date: '2026-09-08', rainfall_mm: 0, temp_max_c: 29, temp_min_c: 20 },
+      ],
+    },
+    land_risk: {
+      score: 22,
+      flags: ['CLEAR_BOUNDARIES', 'MINOR_TERRAIN_CONTOUR'],
+      attestation_id: 'ATS-LAND-KA-HSN-002',
+      trend_flag: 'stable',
+    },
+    crop: {
+      declared: 'Cotton',
+      category: 'CASH',
+      risk_weight: 0.75,
+    },
+    consent_granted: true,
+  },
+
+  'PARCEL-KA-MYSORE-003': {
+    parcel_id: 'PARCEL-KA-MYSORE-003',
+    farmer_display_name: 'Shivanna Swamy',
+    district: 'Mysore',
+    state: 'Karnataka',
+    coordinates: {
+      lat: 12.2958,
+      lng: 76.6394,
+    },
+    raw_index: 0.45,
+    corrected_index: 0.76,
+    uncertainty_interval: [0.71, 0.81],
+    attribution: {
+      moisture_vwc: 0.28,
+      vh_vv_ratio: 0.21,
+      intersection_fraction: 0.94,
+      '7d_rainfall_sum': 28.0,
+    },
+    integrity_flag: false,
+    integrity_flag_reason: null,
+    integrity_deviation_score: 0.04,
+    gps_consistent: true,
+    computed_at: new Date(Date.now() - 3600 * 1000 * 10).toISOString(),
+    forecast: {
+      daily: [
+        { date: '2026-09-02', rainfall_mm: 0, temp_max_c: 31, temp_min_c: 21 },
+        { date: '2026-09-03', rainfall_mm: 0, temp_max_c: 31, temp_min_c: 21 },
+        { date: '2026-09-04', rainfall_mm: 12, temp_max_c: 28, temp_min_c: 20 },
+        { date: '2026-09-05', rainfall_mm: 15, temp_max_c: 27, temp_min_c: 19 },
+        { date: '2026-09-06', rainfall_mm: 2, temp_max_c: 29, temp_min_c: 20 },
+        { date: '2026-09-07', rainfall_mm: 0, temp_max_c: 30, temp_min_c: 21 },
+        { date: '2026-09-08', rainfall_mm: 0, temp_max_c: 31, temp_min_c: 22 },
+      ],
+    },
+    land_risk: {
+      score: 14,
+      flags: ['CLEAR_BOUNDARIES', 'CANAL_IRRIGATED'],
+      attestation_id: 'ATS-LAND-KA-MYS-003',
+      trend_flag: 'improving',
+    },
+    crop: {
+      declared: 'Sugarcane',
+      category: 'CASH',
+      risk_weight: 0.82,
+    },
+    consent_granted: true,
+  },
+
+  'PARCEL-KA-SHIMOGA-004': {
+    parcel_id: 'PARCEL-KA-SHIMOGA-004',
+    farmer_display_name: 'Renukamma Hegde',
+    district: 'Shimoga',
+    state: 'Karnataka',
+    coordinates: {
+      lat: 13.9299,
+      lng: 75.5681,
+    },
+    raw_index: 0.25,
+    corrected_index: 0.36,
+    uncertainty_interval: [0.29, 0.43],
+    attribution: {
+      moisture_vwc: 0.14,
+      vh_vv_ratio: 0.08,
+      intersection_fraction: 0.77,
+      '7d_rainfall_sum': 0.0,
+    },
+    integrity_flag: true,
+    integrity_flag_reason: 'Cloud shadow interference detected in optical scan',
+    integrity_deviation_score: 0.28,
+    gps_consistent: true,
+    computed_at: new Date(Date.now() - 3600 * 1000 * 18).toISOString(),
+    forecast: {
+      daily: [
+        { date: '2026-09-02', rainfall_mm: 0, temp_max_c: 33, temp_min_c: 23 },
+        { date: '2026-09-03', rainfall_mm: 0, temp_max_c: 34, temp_min_c: 23 },
+        { date: '2026-09-04', rainfall_mm: 0, temp_max_c: 34, temp_min_c: 24 },
+        { date: '2026-09-05', rainfall_mm: 0, temp_max_c: 33, temp_min_c: 23 },
+        { date: '2026-09-06', rainfall_mm: 0, temp_max_c: 33, temp_min_c: 22 },
+        { date: '2026-09-07', rainfall_mm: 0, temp_max_c: 32, temp_min_c: 22 },
+        { date: '2026-09-08', rainfall_mm: 0, temp_max_c: 33, temp_min_c: 23 },
+      ],
+    },
+    land_risk: {
+      score: 48,
+      flags: ['SURFACE_RUNOFF_RISK'],
+      attestation_id: 'ATS-LAND-KA-SHM-004',
+      trend_flag: 'degrading',
+    },
+    crop: {
+      declared: 'Arecanut & Mixed Crops',
+      category: 'HORTICULTURE',
+      risk_weight: 0.42,
+    },
+    consent_granted: true,
+  },
+
+  'PARCEL-KA-BELLARY-005': {
+    parcel_id: 'PARCEL-KA-BELLARY-005',
+    farmer_display_name: 'Veerabhadrappa Ballari',
+    district: 'Bellary',
+    state: 'Karnataka',
+    coordinates: {
+      lat: 15.1394,
+      lng: 76.9214,
+    },
+    raw_index: 0.36,
+    corrected_index: 0.52,
+    uncertainty_interval: [0.46, 0.58],
+    attribution: {
+      moisture_vwc: 0.16,
+      vh_vv_ratio: 0.14,
+      intersection_fraction: 0.85,
+      '7d_rainfall_sum': 8.0,
+    },
+    integrity_flag: false,
+    integrity_flag_reason: null,
+    integrity_deviation_score: 0.09,
+    gps_consistent: true,
+    computed_at: new Date(Date.now() - 3600 * 1000 * 8).toISOString(),
+    forecast: {
+      daily: [
+        { date: '2026-09-02', rainfall_mm: 0, temp_max_c: 35, temp_min_c: 24 },
+        { date: '2026-09-03', rainfall_mm: 0, temp_max_c: 36, temp_min_c: 25 },
+        { date: '2026-09-04', rainfall_mm: 4, temp_max_c: 33, temp_min_c: 23 },
+        { date: '2026-09-05', rainfall_mm: 0, temp_max_c: 34, temp_min_c: 24 },
+        { date: '2026-09-06', rainfall_mm: 0, temp_max_c: 35, temp_min_c: 24 },
+        { date: '2026-09-07', rainfall_mm: 0, temp_max_c: 35, temp_min_c: 24 },
+        { date: '2026-09-08', rainfall_mm: 0, temp_max_c: 36, temp_min_c: 25 },
+      ],
+    },
+    land_risk: {
+      score: 32,
+      flags: ['CLEAR_BOUNDARIES'],
+      attestation_id: 'ATS-LAND-KA-BLR-005',
+      trend_flag: 'stable',
+    },
+    crop: {
+      declared: 'Cotton',
+      category: 'CASH',
+      risk_weight: 0.65,
+    },
+    consent_granted: true,
+  },
+};
+
+export const SEEDED_CARDS: Record<string, CardCredential> = {
+  'cred_ats_ka_mandya_8801': {
+    credential_id: 'cred_ats_ka_mandya_8801',
+    parcel_id: 'CEL-KA-MANDYA-001',
+    farmer_display_name: 'Basavegowda Patil',
+    district: 'Mandya',
+    state: 'Karnataka',
+    issued_at: '2026-08-28T06:30:00Z',
+    score: SEEDED_PARCELS['CEL-KA-MANDYA-001'],
+  },
+  'cred_ats_ka_hassan_8802': {
+    credential_id: 'cred_ats_ka_hassan_8802',
+    parcel_id: 'PARCEL-KA-HASSAN-002',
+    farmer_display_name: 'Manjunatha Gowda',
+    district: 'Hassan',
+    state: 'Karnataka',
+    issued_at: '2026-08-30T10:15:00Z',
+    score: SEEDED_PARCELS['PARCEL-KA-HASSAN-002'],
+  },
+  'cred_ats_ka_mysore_8803': {
+    credential_id: 'cred_ats_ka_mysore_8803',
+    parcel_id: 'PARCEL-KA-MYSORE-003',
+    farmer_display_name: 'Shivanna Swamy',
+    district: 'Mysore',
+    state: 'Karnataka',
+    issued_at: '2026-08-29T09:00:00Z',
+    score: SEEDED_PARCELS['PARCEL-KA-MYSORE-003'],
+  },
+  'cred_ats_ka_shimoga_8804': {
+    credential_id: 'cred_ats_ka_shimoga_8804',
+    parcel_id: 'PARCEL-KA-SHIMOGA-004',
+    farmer_display_name: 'Renukamma Hegde',
+    district: 'Shimoga',
+    state: 'Karnataka',
+    issued_at: '2026-08-25T14:20:00Z',
+    score: SEEDED_PARCELS['PARCEL-KA-SHIMOGA-004'],
+  },
+  'cred_ats_ka_bellary_8805': {
+    credential_id: 'cred_ats_ka_bellary_8805',
+    parcel_id: 'PARCEL-KA-BELLARY-005',
+    farmer_display_name: 'Veerabhadrappa Ballari',
+    district: 'Bellary',
+    state: 'Karnataka',
+    issued_at: '2026-09-01T08:00:00Z',
+    score: SEEDED_PARCELS['PARCEL-KA-BELLARY-005'],
+  },
+};

@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-paper: #FAFAF7;
+  --color-ink: #111111;
+  --color-accent: #166534;
+  --color-band-good: #16A34A;
+  --color-band-fair: #D97706;
+  --color-band-attention: #E11D48;
+}
+
+body {
+  color: var(--color-ink);
+  background-color: var(--color-paper);
+  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-space-grotesk), var(--font-inter), sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Hard-shadow Design System Utilities */
+.border-ink {
+  border: 1.5px solid #111111;
+}
+
+.card-hard {
+  background-color: #FFFFFF;
+  border: 1.5px solid #111111;
+  border-radius: 8px;
+  box-shadow: 4px 4px 0px #111111;
+}
+
+.btn-hard {
+  border: 1.5px solid #111111;
+  border-radius: 8px;
+  box-shadow: 4px 4px 0px #111111;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+  font-weight: 700;
+}
+
+.btn-hard:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #111111;
+}
+
+.badge-hard {
+  border: 1.5px solid #111111;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+/* Hide scrollbars for horizontal strips */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media print {
+  body {
+    background: white !important;
+  }
+}
